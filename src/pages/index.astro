@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Form test">
+  <main
+    class="mx-auto max-w-xl min-h-screen grid place-content-center py-10 px-5"
+  >
+    <div class="space-y-10">
+      <h1 class="text-3xl text-sky-700">
+        Astro & Cloudflare Pages Functions & Airtable Form Demo
+      </h1>
+      <form method="post" action="/functions/api/contact.ts" class="space-y-5">
+        <div>
+          <label
+            for="name"
+            class="block mb-0.5 text-sm font-medium text-gray-900">Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+            name="name"
+          />
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block mb-0.5 text-sm font-medium text-gray-900">Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+            name="email"
+          />
+        </div>
+        <div>
+          <label
+            for="phone"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Phone Number</label
+          >
+          <input
+            type="text"
+            id="phone"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+            name="phone"
+          />
+        </div>
+        <div>
+          <label
+            for="subject"
+            class="block mb-2 text-sm font-medium text-gray-900">Subject</label
+          >
+          <input
+            type="text"
+            id="subject"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+            name="subject"
+          />
+        </div>
+        <div>
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900">Message</label
+          >
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          >Submit</button
+        >
+      </form>
+    </div>
+  </main>
+</Layout>
