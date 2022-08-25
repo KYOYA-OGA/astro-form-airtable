@@ -8,9 +8,13 @@ import Layout from '../layouts/Layout.astro';
   >
     <div class="space-y-10">
       <h1 class="text-3xl text-sky-700">
-        Astro & Cloudflare Pages Functions & Airtable Form Demo
+        Astro & Cloudflare Workers & Airtable Form Demo
       </h1>
-      <form method="post" action="/functions/api/contact.ts" class="space-y-5">
+      <form
+        method="post"
+        action="https://cw-airtable.kyoyaoga9882.workers.dev/submit"
+        class="space-y-5"
+      >
         <div>
           <label
             for="name"
